@@ -1,0 +1,26 @@
+app.config(function ($stateProvider) {
+    // define a something state
+    $stateProvider
+    .state('albumList', {
+        // that renders the following
+         url: '/albums',
+        template: '' +
+            '<div ng-controller="AlbumsCtrl">' +
+                '<h3>Albums</h3>' +
+                '<div class="row">' +
+                    '<div ng-repeat="album in albums" class="col-xs-4">' +
+                        '<a class="thumbnail" ng-click="viewAlbum(album._id)" href="#">' +
+                            '<img ng-src="{{ album.imageUrl }}">' +
+                            '<div class="caption">' +
+                                '<h5>' +
+                                    '<span>{{ album.name }}</span>' +
+                                '</h5>' +
+                                '<small>{{ album.songs.length }} songs</small>' +
+                            '</div>' +
+                        '</a>' +
+                    '</div>' +
+                '</div>' +
+            '</div>'
+    });
+});
+
