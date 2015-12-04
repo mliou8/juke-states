@@ -2,7 +2,7 @@ app.config(function($stateProvider){
 	$stateProvider
 	.state('singleAlbum', {
 		url: '/albums/:id',
-		controllers: 'AlbumCtrl',
+		controller: 'AlbumCtrl',
 		templateUrl: "../htmlTemplates/album.html"
 	})
 })
