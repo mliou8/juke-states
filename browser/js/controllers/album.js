@@ -7,7 +7,6 @@ app.controller('AlbumCtrl', function ($scope, $rootScope, PlayerFactory, AlbumFa
 	$scope.start = function (song) {
 		PlayerFactory.start(song, $scope.album.songs);
 	};
-	console.log("stateParams", $stateParams.id);
 
 	AlbumFactory.fetchById($stateParams.id)
 	.then(function(album) {
