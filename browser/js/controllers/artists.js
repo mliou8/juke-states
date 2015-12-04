@@ -7,9 +7,9 @@ app.controller('ArtistsCtrl', function ($scope, $rootScope, ArtistFactory) {
 		$scope.showMe = (data.name == 'allArtists');
 	});
 	$scope.viewArtist = function (artistId) {
-		$rootScope.$broadcast('changeView', {
-			name: 'oneArtist',
-			id: artistId
-		});
+		// $rootScope.$broadcast('changeView', {
+		// 	name: 'oneArtist',
+		// 	id: artistId
+		// });
 	};
 });
